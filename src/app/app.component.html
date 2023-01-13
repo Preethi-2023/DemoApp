@@ -1,0 +1,14 @@
+<app-header [parentmessage] = "message"></app-header>
+<app-newcomponent></app-newcomponent>
+<app-directives></app-directives>
+<input type="text" (blur)="Handledata($event)"/>
+<app-hooks 
+[parentData]="data"
+[product]="product">
+<p>ngAfterContentInit</p>
+<h4 #child>This is the child component</h4></app-hooks>
+    <h3>Simple Form</h3>
+    <p>Product Name:<input type="text" [(ngModel)]="name"></p>
+    <p>Product Price:<input type="number" [(ngModel)]="price"></p>
+    <p><button (click)="UpdateProduct()">Update Product</button></p>
+<router-outlet></router-outlet>
